@@ -40,3 +40,51 @@
 <p>Treat unhealthy patients in each room. And check for the unhealthy patients in random room</p>
 <h3>STEP 5:</h3>
 <p>Measure the performance parameters: For each treatment performance incremented, for each movement performance decremented</p>
+<h1>PROGRAM</h1>
+<pre><code>
+  def move_left(self):
+    # Move the agent to the left if possible
+    if self.location == "B":
+        self.location = "A"
+
+def move_right(self):
+    # Move the agent to the right if possible
+    if self.location == "A":
+        self.location = "B"
+
+def suck_dirt(self):
+    # Suck dirt in the current location if there is dirt
+    if self.dirt_status[self.location]:
+        self.dirt_status[self.location] = False
+        print(f"Sucked dirt in location {self.location}")
+
+def do_nothing(self):
+    # Do nothing
+    pass
+
+def perform_action(self, action):
+    # Perform the specified action
+    if action == "left":
+        self.move_left()
+    elif action == "right":
+        self.move_right()
+    elif action == "suck":
+        self.suck_dirt()
+    elif action == "nothing":
+        self.do_nothing()
+    else:
+        print("Invalid action")
+
+def print_status(self):
+    # Print the current status of the agent
+    print(f"Location: {self.location}, Dirt Status: {self.dirt_status}")
+</code></pre>
+<h1>Example usage:</h1>
+<p>agent = VacuumCleanerAgent()
+</p>
+<h1>Move the agent, suck dirt, and do nothing
+</h1>
+<p>agent.perform_action("left") agent.print_status() agent.perform_action("suck") agent.print_status() agent.perform_action("nothing") agent.print_status()</p>
+<img src="https://private-user-images.githubusercontent.com/118916413/306896439-0f635fa0-c670-42c7-a3dc-b1bc292ac788.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDg3Nzc0MjcsIm5iZiI6MTc0ODc3NzEyNywicGF0aCI6Ii8xMTg5MTY0MTMvMzA2ODk2NDM5LTBmNjM1ZmEwLWM2NzAtNDJjNy1hM2RjLWIxYmMyOTJhYzc4OC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNjAxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDYwMVQxMTI1MjdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02Njg1OTM5M2VmN2QwODgwMjA2MTNmODgwYmM5MDgzZmFkNjgyODEwOTVmNDY5MDk0MTUzNGRjNTZmZmY4MGMxJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.GNnHVASwa8gtwDlqiYZec7a9dz9mgchAOMdTPJOp8Ok">
+<h1>RESULT:</h1>
+<p>Thus the Developing AI Agent with PEAS Description was implemented using python programming.</p>
